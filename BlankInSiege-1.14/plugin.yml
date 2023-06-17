@@ -1,0 +1,30 @@
+main: com.gmail.ksw26141.BlankInSiege
+name: BlankInSiege
+version: 2.20200517
+author: Blank_In
+website: https://blog.naver.com/ksw87581
+prefix: BlankInSiege
+api-version: 1.14
+commands:
+  blanksiege:
+    description: 들고있는 아이템에 전용 태그를 추가하는 명령어입니다.
+    permission: BlankInSiege.op.blanksiege
+    permission-message: 오피전용 명령어입니다.
+    usage: /blanksiege <tag>
+  blitzcharge:
+    description: 플레이어의 섬광방패 충전량을 늘리는 명령어입니다.
+    permission: BlankInSiege.op.blitzcharge
+    permission-message: 오피전용 명령어입니다.
+    usage: /blitzcharge <username> <count>, /blitzcharge <count>
+    
+permissions:
+  BlankInSiege.op.*:
+    description: 오피 전용 명령어 모음
+    default: op
+    children:
+      BlankInSiege.op.siege: true
+      BlankInSiege.op.blitzcharge: true
+    
+  BlankInSiege.user.*:
+    description: 유저 전용 명령어 모음
+    children:
